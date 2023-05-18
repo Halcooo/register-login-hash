@@ -1,8 +1,10 @@
 const express = require("express");
 var bodyParser = require("body-parser");
-const app = express();
 const cors = require("cors");
+const app = express();
 const PORT = 3000;
+
+
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -15,6 +17,8 @@ const {
   loginUser,
   getAllUsers,
 } = require("./controller/userController");
+
+//routes
 
 app.get("/users", getAllUsers);
 
