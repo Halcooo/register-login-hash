@@ -1,4 +1,3 @@
-const { log } = require("console");
 const connection = require("../database/connection");
 
 const bcrypt = require("bcrypt");
