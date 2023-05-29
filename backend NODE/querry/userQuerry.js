@@ -46,7 +46,7 @@ const login = (user) => {
    FROM user  where email = ? `;
     connection.query(querryUser, [email], (err, res) => {
       if (err) return reject(err);
-      if (res) {
+      if (res[0]) {
         bcrypt.compare(password, res[0].password, (err, isValid) => {
           console.log(isValid);
           resolve(res[0]);
