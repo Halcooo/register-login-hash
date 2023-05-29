@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Resgister() {
-    const [email, setemail] = useState("");
-    const [password, setpassword] = useState("");
-    const [username, setusername] = useState("");
-    const navigate = useNavigate();
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  const [username, setusername] = useState("");
+  const navigate = useNavigate();
 
   const register = (e) => {
     const user = {
@@ -29,13 +29,14 @@ function Resgister() {
       });
   };
 
-  const toLogin=()=>{
-    navigate("/login")
-  }
+  const toLogin = () => {
+    navigate("/login");
+  };
 
   return (
     <div className="d-flex flex-column container-sm mb-5 mt-5 w-50">
       <input
+        className="form-control mb-3"
         type="text"
         placeholder="email"
         onChange={(e) => {
@@ -43,6 +44,7 @@ function Resgister() {
         }}
       />
       <input
+        className="form-control mb-3"
         type="password"
         placeholder="password"
         onChange={(e) => {
@@ -50,14 +52,19 @@ function Resgister() {
         }}
       />
       <input
+        className="form-control mb-3"
         type="text"
         placeholder="username"
         onChange={(e) => {
           setusername(e.target.value);
         }}
       />
-      <button onClick={register}>Register</button>
-      <strong className="register-login-text" onClick={toLogin}>Already have account?</strong>
+      <button onClick={register} className="btn btn-primary">
+        Register
+      </button>
+      <strong className="register-login-text" onClick={toLogin}>
+        Already have account?
+      </strong>
     </div>
   );
 }

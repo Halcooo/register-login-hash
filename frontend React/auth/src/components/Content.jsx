@@ -36,7 +36,7 @@ function Content() {
           fugiat unde odio officia.
         </p>
 
-        <button onClick={logout}>Logout</button>
+        <button onClick={logout} className="btn btn-danger">Logout</button>
       </div>
     );
   }

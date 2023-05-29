@@ -33,6 +33,7 @@ function Login() {
   return (
     <div className="d-flex flex-column container-sm mb-5 mt-5 w-50">
       <input
+      className="form-control mb-3"
         type="text"
         placeholder="email"
         onChange={(e) => {
@@ -40,13 +41,16 @@ function Login() {
         }}
       />
       <input
+         className="form-control mb-3"
         type="password"
         placeholder="password"
         onChange={(e) => {
           setpassword(e.target.value);
         }}
       />
-      <button onClick={login}>login</button>
+      <button onClick={login} className="btn btn-primary">
+        Login
+      </button>
       <strong onClick={toRegister} className="register-login-text">
         Register now!
       </strong>
