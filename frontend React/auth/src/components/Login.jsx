@@ -31,29 +31,32 @@ function Login() {
       });
   };
   return (
-    <div className="d-flex flex-column container-sm mb-5 mt-5 w-50">
-      <input
-      className="form-control mb-3"
-        type="text"
-        placeholder="email"
-        onChange={(e) => {
-          setemail(e.target.value);
-        }}
-      />
-      <input
-         className="form-control mb-3"
-        type="password"
-        placeholder="password"
-        onChange={(e) => {
-          setpassword(e.target.value);
-        }}
-      />
-      <button onClick={login} className="btn btn-primary">
-        Login
-      </button>
-      <strong onClick={toRegister} className="register-login-text">
-        Register now!
-      </strong>
+    <div className="container d-flex justify-center align-center">
+      <div className="d-flex flex-column container-sm mb-5 mt-5 w-50 bg-light p-4">
+        <h1>Login</h1>
+        <input
+          className="form-control mb-3"
+          type="text"
+          placeholder="email"
+          onChange={(e) => {
+            setemail(e.target.value);
+          }}
+        />
+        <input
+          className="form-control mb-3"
+          type="password"
+          placeholder="password"
+          onChange={(e) => {
+            setpassword(e.target.value);
+          }}
+        />
+        <button onClick={login} className="btn btn-primary">
+          Login
+        </button>
+        <strong onClick={toRegister} className="register-login-text">
+          Register now!
+        </strong>
+      </div>
     </div>
   );
 }

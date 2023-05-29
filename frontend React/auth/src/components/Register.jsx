@@ -34,37 +34,40 @@ function Resgister() {
   };
 
   return (
-    <div className="d-flex flex-column container-sm mb-5 mt-5 w-50">
-      <input
-        className="form-control mb-3"
-        type="text"
-        placeholder="email"
-        onChange={(e) => {
-          setemail(e.target.value);
-        }}
-      />
-      <input
-        className="form-control mb-3"
-        type="password"
-        placeholder="password"
-        onChange={(e) => {
-          setpassword(e.target.value);
-        }}
-      />
-      <input
-        className="form-control mb-3"
-        type="text"
-        placeholder="username"
-        onChange={(e) => {
-          setusername(e.target.value);
-        }}
-      />
-      <button onClick={register} className="btn btn-primary">
-        Register
-      </button>
-      <strong className="register-login-text" onClick={toLogin}>
-        Already have account?
-      </strong>
+    <div className="d-flex flex-column container-sm mb-5 mt-5 w-50 bg-light p-4">
+      <div className="d-flex flex-column container-sm mb-5 mt-5 w-50">
+        <h1>Register</h1>
+        <input
+          className="form-control mb-3"
+          type="text"
+          placeholder="email"
+          onChange={(e) => {
+            setemail(e.target.value);
+          }}
+        />
+        <input
+          className="form-control mb-3"
+          type="password"
+          placeholder="password"
+          onChange={(e) => {
+            setpassword(e.target.value);
+          }}
+        />
+        <input
+          className="form-control mb-3"
+          type="text"
+          placeholder="username"
+          onChange={(e) => {
+            setusername(e.target.value);
+          }}
+        />
+        <button onClick={register} className="btn btn-primary">
+          Register
+        </button>
+        <strong className="register-login-text" onClick={toLogin}>
+          Already have account?
+        </strong>
+      </div>
     </div>
   );
 }
