@@ -47,7 +47,9 @@ function Login() {
         }}
       />
       <button onClick={login}>login</button>
-      <strong onClick={toRegister}>Register now!</strong>
+      <strong onClick={toRegister} className="register-login-text">
+        Register now!
+      </strong>
     </div>
   );
 }

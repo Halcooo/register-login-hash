@@ -57,7 +57,7 @@ function Resgister() {
         }}
       />
       <button onClick={register}>Register</button>
-      <strong onClick={toLogin}>Already have account?</strong>
+      <strong className="register-login-text" onClick={toLogin}>Already have account?</strong>
     </div>
   );
 }
