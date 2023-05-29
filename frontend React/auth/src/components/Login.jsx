@@ -8,6 +8,7 @@ function Login() {
   const [password, setpassword] = useState("");
   const navigate = useNavigate();
   const toContent = () => navigate("/");
+  const toRegister = () => navigate("/register");
 
   const login = (e) => {
     const user = {
@@ -46,6 +47,7 @@ function Login() {
         }}
       />
       <button onClick={login}>login</button>
+      <strong onClick={toRegister}>Register now!</strong>
     </div>
   );
 }

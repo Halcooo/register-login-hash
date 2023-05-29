@@ -8,6 +8,7 @@ function Content() {
   );
   const navigate = useNavigate();
   const toLogin = () => navigate("/login");
+
   useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("loggedUser")));
     if (!loggedUser) {
@@ -15,7 +16,11 @@ function Content() {
       console.log(loggedUser);
     }
     console.log(loggedUser);
-  }, []);
+  }, [loggedUser]);
+
+  const logout = () => {
+    localStorage.removeItem("loggedUser");
+  };
 
   if (loggedUser) {
     return (
@@ -30,6 +35,8 @@ function Content() {
           exercitationem. Porro ex adipisci magni facere id cupiditate voluptate
           fugiat unde odio officia.
         </p>
+
+        <button onClick={logout}>Logout</button>
       </div>
     );
   }

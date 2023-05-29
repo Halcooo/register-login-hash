@@ -1,11 +1,14 @@
 import React from "react";
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Resgister() {
     const [email, setemail] = useState("");
     const [password, setpassword] = useState("");
     const [username, setusername] = useState("");
+    const navigate = useNavigate();
+
   const register = (e) => {
     const user = {
       email,
@@ -25,6 +28,11 @@ function Resgister() {
         console.log(error);
       });
   };
+
+  const toLogin=()=>{
+    navigate("/login")
+  }
+
   return (
     <div className="d-flex flex-column container-sm mb-5 mt-5 w-50">
       <input
@@ -49,6 +57,7 @@ function Resgister() {
         }}
       />
       <button onClick={register}>Register</button>
+      <strong onClick={toLogin}>Already have account?</strong>
     </div>
   );
 }
