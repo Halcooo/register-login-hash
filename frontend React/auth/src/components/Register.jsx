@@ -21,7 +21,8 @@ function Resgister() {
       .post("http://localhost:3000/user/register", user)
       .then((response) => {
         if (response) {
-          console.log("loggedIN", response.data);
+          console.log("registered", response.data);
+          toLogin();
         }
       })
       .catch(function (error) {
