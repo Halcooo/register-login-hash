@@ -16,10 +16,11 @@ function Content() {
       console.log(loggedUser);
     }
     console.log(loggedUser);
-  }, [loggedUser]);
+  }, []);
 
   const logout = () => {
     localStorage.removeItem("loggedUser");
+    toLogin();
   };
 
   if (loggedUser) {
@@ -42,7 +43,7 @@ function Content() {
         </div>
       </div>
     );
-  }
+  } else toLogin();
 }
 
 export default Content;
